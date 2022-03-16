@@ -329,8 +329,10 @@ function transformJavaScript(ast, { env }) {
         }
       }
     },
-    JSXSpreadAttribute(node) {
-      console.log(node)
+    JSXAttributeName(node, parent, key) {
+      console.log('NODE', node)
+      console.log('PARENT', parent)
+      console.log('KEY', key)
     }
   })
 }
